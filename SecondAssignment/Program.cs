@@ -2,28 +2,22 @@ using Microsoft.AspNetCore.Identity;
 using SecondAssignment.BD;
 using Microsoft.EntityFrameworkCore;
 
-
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddIdentityCore<IdentityUser>()
-    .AddRoles<IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddIdentityCore<IdentityUser>(options =>
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
     {
         options.Password.RequireDigit = true;
         options.Password.RequiredLength = 8;
-        
     })
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-
 
 builder.Services.AddControllersWithViews();
 
@@ -45,7 +39,10 @@ app.UseSwaggerUI(c =>
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
     c.RoutePrefix = string.Empty;  // To serve the Swagger UI at the app's root (http://localhost:<port>/)
 });
-
+app.UseCors(policy => 
+    policy.WithOrigins("http://localhost:44322") 
+        .AllowAnyMethod()
+        .AllowAnyHeader());
 
 app.UseHttpsRedirection();
 

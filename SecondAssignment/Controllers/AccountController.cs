@@ -21,7 +21,7 @@ public class AccountController : Controller
     [HttpGet("RegisterUser")]
     public IActionResult Register()
     {
-        return View();
+        return Ok();
     }
 
     [HttpPost("RegisterModel")]
@@ -35,7 +35,7 @@ public class AccountController : Controller
             if (result.Succeeded)
             {
                 await _signInManager.SignInAsync(user, isPersistent: false);
-                return RedirectToAction("Index", "Home");
+                return Ok();
             }
 
             foreach (var error in result.Errors)
@@ -44,13 +44,13 @@ public class AccountController : Controller
             }
         }
 
-        return View(model);
+        return BadRequest(ModelState);
     }
         
     [HttpGet("LoginUser")]
     public IActionResult Login()
     {
-        return View();
+        return Ok();
     }
     [HttpPost("LoginModel")]
     public async Task<IActionResult> Login(LoginModel model)
@@ -69,13 +69,13 @@ public class AccountController : Controller
             }
         }
 
-        return View(model);
+        return BadRequest(ModelState);
     }
 
     [HttpPost("LogOutModel")]
     public async Task<IActionResult> Logout()
     {
         await _signInManager.SignOutAsync();
-        return RedirectToAction("Index", "Home");
+        return Ok();
     }
 }
