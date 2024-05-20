@@ -2,11 +2,10 @@
 using System.ComponentModel.DataAnnotations;
 public class LoginModel
 {
-    [Required]
-    [EmailAddress]
+    [Required(ErrorMessage = "Username is required")]
     public string UserName { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "Password is required")]
     [DataType(DataType.Password)]
     public string Password { get; set; }
     

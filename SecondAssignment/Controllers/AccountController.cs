@@ -73,16 +73,19 @@ public class AccountController : Controller
 
             if (result.Succeeded)
             {
-                return RedirectToAction("Index", "Home");
+                return Ok("Login successful");
             }
             else
             {
                 ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                return BadRequest(ModelState);
             }
         }
 
+        // Неверные данные в модели, возвращаем ошибку.
         return BadRequest(ModelState);
     }
+
 
     [HttpPost("LogOutModel")]
     public async Task<IActionResult> Logout()
