@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MZEXl3o4CSeVixSz3IR6V0yFj4Y3rvVFYZPBBvk4ZtKOpA2eozT8IooAWvUV4h5+vvuYV7SZSZ7fMXRiVRF8uw==",
+  "dgSpecHash": "sUcFPJQDN5dS4QZ4kjhEz3HSwsHvYznengdvVwC2qryRdU+lCHeuvWfpXeSU+sdkkf9tGDBQlHjk0YV4Qwqcog==",
   "success": true,
   "projectFilePath": "E:\\DotNetBack\\SecondAssignment\\SecondAssignment\\SecondAssignment.csproj",
   "expectedPackageFiles": [
@@ -51,8 +51,8 @@
     "C:\\Users\\joyse\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
     "C:\\Users\\joyse\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\joyse\\.nuget\\packages\\mono.texttemplating\\3.0.0-preview-0052-g5d0f76c785\\mono.texttemplating.3.0.0-preview-0052-g5d0f76c785.nupkg.sha512",
-    "C:\\Users\\joyse\\.nuget\\packages\\npgsql\\8.0.3\\npgsql.8.0.3.nupkg.sha512",
-    "C:\\Users\\joyse\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.4\\npgsql.entityframeworkcore.postgresql.8.0.4.nupkg.sha512",
+    "C:\\Users\\joyse\\.nuget\\packages\\npgsql\\8.0.2\\npgsql.8.0.2.nupkg.sha512",
+    "C:\\Users\\joyse\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\9.0.0-preview.3\\npgsql.entityframeworkcore.postgresql.9.0.0-preview.3.nupkg.sha512",
     "C:\\Users\\joyse\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.1\\swashbuckle.aspnetcore.swagger.6.6.1.nupkg.sha512",
     "C:\\Users\\joyse\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.1\\swashbuckle.aspnetcore.swaggergen.6.6.1.nupkg.sha512",
     "C:\\Users\\joyse\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.6.1\\swashbuckle.aspnetcore.swaggerui.6.6.1.nupkg.sha512",
