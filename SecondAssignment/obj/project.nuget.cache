@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6MTjKF2H9EbHF6RXEjjDppbjnvt8Wk5prDzDuLw1THp37pCVenECWhU9AgquYSCdFij2y55lVDQvSwBcj8no/A==",
+  "dgSpecHash": "MZEXl3o4CSeVixSz3IR6V0yFj4Y3rvVFYZPBBvk4ZtKOpA2eozT8IooAWvUV4h5+vvuYV7SZSZ7fMXRiVRF8uw==",
   "success": true,
   "projectFilePath": "E:\\DotNetBack\\SecondAssignment\\SecondAssignment\\SecondAssignment.csproj",
   "expectedPackageFiles": [
@@ -25,6 +25,7 @@
     "C:\\Users\\joyse\\.nuget\\packages\\microsoft.entityframeworkcore.design\\9.0.0-preview.3.24172.4\\microsoft.entityframeworkcore.design.9.0.0-preview.3.24172.4.nupkg.sha512",
     "C:\\Users\\joyse\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\9.0.0-preview.3.24172.4\\microsoft.entityframeworkcore.relational.9.0.0-preview.3.24172.4.nupkg.sha512",
     "C:\\Users\\joyse\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\9.0.0-preview.3.24172.4\\microsoft.entityframeworkcore.sqlserver.9.0.0-preview.3.24172.4.nupkg.sha512",
+    "C:\\Users\\joyse\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\9.0.0-preview.3.24172.4\\microsoft.entityframeworkcore.tools.9.0.0-preview.3.24172.4.nupkg.sha512",
     "C:\\Users\\joyse\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.0-preview.3.24172.9\\microsoft.extensions.caching.abstractions.9.0.0-preview.3.24172.9.nupkg.sha512",
     "C:\\Users\\joyse\\.nuget\\packages\\microsoft.extensions.caching.memory\\9.0.0-preview.3.24172.9\\microsoft.extensions.caching.memory.9.0.0-preview.3.24172.9.nupkg.sha512",
     "C:\\Users\\joyse\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.0-preview.3.24172.9\\microsoft.extensions.configuration.abstractions.9.0.0-preview.3.24172.9.nupkg.sha512",

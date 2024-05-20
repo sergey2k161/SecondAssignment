@@ -12,6 +12,7 @@
           "Microsoft.EntityFrameworkCore": "9.0.0-preview.3.24172.4",
           "Microsoft.EntityFrameworkCore.Design": "9.0.0-preview.3.24172.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0-preview.3.24172.4",
+          "Microsoft.EntityFrameworkCore.Tools": "9.0.0-preview.3.24172.4",
           "Microsoft.OpenApi": "1.6.14",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4",
           "Swashbuckle.AspNetCore.Swagger": "6.6.1",
@@ -472,6 +473,11 @@
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.24.17204"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/9.0.0-preview.3.24172.4": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "9.0.0-preview.3.24172.4"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/9.0.0-preview.3.24172.9": {
@@ -1147,6 +1153,13 @@
       "sha512": "sha512-Ba4vONB06BEGUNeCKNJIxZGPfeKJKFBaDsJ+ZKBZkCe99eDNdfoa45oO/Lf7r3NmQcIcFxArSoEcRjhPWLDNIg==",
       "path": "microsoft.entityframeworkcore.sqlserver/9.0.0-preview.3.24172.4",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.9.0.0-preview.3.24172.4.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/9.0.0-preview.3.24172.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Di8NPUHGZ5XfsZy/da1JxKxOo4lOt4Q7gblkMdG2izBlf01T0m3b8vCFB6cRmsb/6dCo+rMbtF4rp9Skk56NZA==",
+      "path": "microsoft.entityframeworkcore.tools/9.0.0-preview.3.24172.4",
+      "hashPath": "microsoft.entityframeworkcore.tools.9.0.0-preview.3.24172.4.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/9.0.0-preview.3.24172.9": {
       "type": "package",

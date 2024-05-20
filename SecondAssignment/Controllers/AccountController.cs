@@ -29,7 +29,7 @@ public class AccountController : Controller
     {
         if (ModelState.IsValid)
         {
-            var user = new IdentityUser { UserName = model.Email, Email = model.Email };
+            var user = new IdentityUser { UserName = model.UserName };
             var result = await _userManager.CreateAsync(user, model.Password);
 
             if (result.Succeeded)
@@ -44,8 +44,20 @@ public class AccountController : Controller
             }
         }
 
+        // Log ModelState errors for debugging
+        foreach (var key in ModelState.Keys)
+        {
+            var errors = ModelState[key].Errors;
+            foreach (var error in errors)
+            {
+                // Log each error
+                Console.WriteLine($"Error in {key}: {error.ErrorMessage}");
+            }
+        }
+
         return BadRequest(ModelState);
     }
+
         
     [HttpGet("LoginUser")]
     public IActionResult Login()
@@ -57,7 +69,7 @@ public class AccountController : Controller
     {
         if (ModelState.IsValid)
         {
-            var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
+            var result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, lockoutOnFailure: false);
 
             if (result.Succeeded)
             {
