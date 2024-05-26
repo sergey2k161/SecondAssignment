@@ -1,11 +1,12 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-
+using SecondAssignment.Servise;
+using SecondAssignment.Controllers;
+using SecondAssignment.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -33,9 +34,11 @@ builder.Services.AddCors(options =>
                 .AllowAnyHeader();
         });
 });
+builder.Services.AddScoped<EmailService>();
 
 // Add controllers with views
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<ITaskService, TaskService>();
 
 var app = builder.Build();
 
@@ -55,9 +58,15 @@ if (app.Environment.IsDevelopment())
 app.UseCors("AllowAllOrigins");
 
 app.UseHttpsRedirection();
+app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapControllers();
+
+app.MapControllerRoute(
+    name: "account",
+    pattern: "Account/{action}",
+    defaults: new { controller = "Account" }
+);
 
 // Apply database migrations
 using (var scope = app.Services.CreateScope())

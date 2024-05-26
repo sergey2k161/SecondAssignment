@@ -64,6 +64,19 @@ public class AccountController : Controller
     {
         return Ok();
     }
+    [HttpGet("CurrentUser")]
+    public IActionResult CurrentUser()
+    {
+        if (User.Identity.IsAuthenticated)
+        {
+            return Ok($"Authenticated user: {User.Identity.Name}");
+        }
+        else
+        {
+            return Ok("User not authenticated");
+        }
+    }
+
     [HttpPost("LoginModel")]
     public async Task<IActionResult> Login(LoginModel model)
     {
@@ -86,11 +99,12 @@ public class AccountController : Controller
         return BadRequest(ModelState);
     }
 
-
+    /*
     [HttpPost("LogOutModel")]
     public async Task<IActionResult> Logout()
     {
         await _signInManager.SignOutAsync();
         return Ok();
     }
+    */
 }

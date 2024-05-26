@@ -1,8 +1,10 @@
 ﻿namespace SecondAssignment.Models;
-
+using System.ComponentModel.DataAnnotations;
 public class Tasks
 {
-    public long TaskId { get; set; }
+    [Key]
+    public int TaskId { get; set; }
+    
     public string Title { get; set; }
     public string Description { get; set; }
     public DateTime Deadline {  get; set; }
