@@ -26,19 +26,20 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 // Add CORS policy
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAllOrigins",
-        builder =>
+    options.AddPolicy("AllowSpecificOrigin",
+        policyBuilder =>
         {
-            builder.AllowAnyOrigin()
+            policyBuilder.WithOrigins("http://localhost", "http://localhost:8080")
                 .AllowAnyMethod()
-                .AllowAnyHeader();
+                .AllowAnyHeader()
+                .AllowCredentials();
         });
 });
 builder.Services.AddScoped<EmailService>();
+builder.Services.AddScoped<ITaskService, TaskService>();
 
 // Add controllers with views
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<ITaskService, TaskService>();
 
 var app = builder.Build();
 
@@ -55,12 +56,11 @@ if (app.Environment.IsDevelopment())
 }
 
 // Enable CORS
-app.UseCors("AllowAllOrigins");
+app.UseCors("AllowSpecificOrigin");
 
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
-
 
 app.MapControllerRoute(
     name: "account",
